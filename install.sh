@@ -5,14 +5,16 @@
 #  Панель: @cloudcli-ai/cloudcli (https://github.com/siteboon/claudecodeui)
 #
 #  На сервере (Ubuntu 22.04 / 24.04), от root:
-#    bash install.sh
+#    bash -c "$(curl -fsSL https://raw.githubusercontent.com/sashik08/cloudcli-installer/main/install.sh)"
 #
 #  Неинтерактивно:
-#    AGENT=claude DOMAIN=ai.example.test EMAIL=me@example.test bash install.sh
+#    AGENT=claude DOMAIN=ai.example.test EMAIL=me@example.test \
+#      bash -c "$(curl -fsSL https://raw.githubusercontent.com/sashik08/cloudcli-installer/main/install.sh)"
 #    AGENT: claude | codex
 #
 #  Без установок (локальная проверка шагов):
-#    DRY_RUN=1 AGENT=claude DOMAIN=ai.example.test EMAIL=dev@example.test bash install.sh
+#    DRY_RUN=1 AGENT=claude DOMAIN=ai.example.test EMAIL=dev@example.test \
+#      bash -c "$(curl -fsSL https://raw.githubusercontent.com/sashik08/cloudcli-installer/main/install.sh)"
 # =============================================================================
 
 set -Eeuo pipefail

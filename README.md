@@ -22,13 +22,24 @@ bash tests/dry-run.sh
 
 ## Установка на VPS
 
-Ubuntu 22.04/24.04, root, 4 ГБ RAM, A-запись домена на IP сервера:
+Ubuntu 22.04/24.04, от **root**, 4 ГБ RAM, A-запись домена на IP сервера.
+
+Интерактивно:
 
 ```bash
-AGENT=claude DOMAIN=ai.example.com EMAIL=you@example.com bash install.sh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/sashik08/cloudcli-installer/main/install.sh)"
 ```
 
-Интерактивно: `bash install.sh`.
+С параметрами:
+
+```bash
+AGENT=claude DOMAIN=ai.example.com EMAIL=you@example.com \
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/sashik08/cloudcli-installer/main/install.sh)"
+```
+
+Тот же URL для проверки без установок: добавьте `DRY_RUN=1` перед `bash`.
+
+Локальная копия: `bash install.sh`.
 
 ## Что ставится
 
